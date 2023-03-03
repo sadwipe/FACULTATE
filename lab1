@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+void afisareMedii(float note[][3], int numarCandidati) {
+    for (int i = 0; i < 3; i++) {
+        float suma = 0;
+        for (int j = 0; j < numarCandidati; j++) {
+            suma += note[j][i];
+        }
+        float media = suma / numarCandidati;
+        cout << "Media la proba " << i + 1 << " este: " << media << std::endl;
+    }
+}
+
+int main() {
+ 
+    float note[][3] = { {8, 7, 9}, {6, 5, 8}, {9, 8, 9} };
+    int numarCandidati = 3;
+
+    afisareMedii(note, numarCandidati);
+
+    return 0;
+}
